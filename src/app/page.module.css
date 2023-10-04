@@ -1,41 +1,42 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 6rem;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 .center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
-  padding: 4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 4rem;
+  padding-inline: 0;
 }
 
-.center::before {
-  background: var(--secondary-glow);
+.center:before {
   border-radius: 50%;
-  width: 480px;
-  height: 360px;
-  margin-left: -400px;
+  background: var(--secondary-glow);
+  block-size: 360px;
+  inline-size: 480px;
+  margin-inline-start: -400px;
 }
 
-.center::after {
-  background: var(--primary-glow);
-  width: 240px;
-  height: 180px;
+.center:after {
   z-index: -1;
+  background: var(--primary-glow);
+  block-size: 180px;
+  inline-size: 240px;
 }
 
-.center::before,
-.center::after {
-  content: '';
-  left: 50%;
+.center:before,
+.center:after {
   position: absolute;
+  content: '';
   filter: blur(45px);
+  inset-inline-start: 50%;
   transform: translateZ(0);
 }
 
@@ -44,20 +45,21 @@
 }
 
 /* Mobile */
-@media (max-width: 700px) {
+@media (width <= 700px) {
   .center {
-    padding: 8rem 0 6rem;
+    padding-block: 8rem 6rem;
+    padding-inline: 0;
   }
 
-  .center::before {
+  .center:before {
+    block-size: 300px;
     transform: none;
-    height: 300px;
   }
 }
 
 /* Tablet and Smaller Desktop */
 @media (prefers-color-scheme: dark) {
   .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+    filter: invert(1) drop-shadow(0 0 0.3rem hsl(0deg 0% 100% / 43.9%));
   }
 }

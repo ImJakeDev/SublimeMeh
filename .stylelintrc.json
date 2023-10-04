@@ -1,0 +1,26 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-idiomatic-order"],
+  "plugins": ["stylelint-order", "stylelint-color-format", "stylelint-use-logical-spec"],
+  "rules": {
+    "no-duplicate-selectors": true,
+    "selector-attribute-quotes": "always",
+    "declaration-no-important": true,
+    "property-no-vendor-prefix": true,
+    "value-no-vendor-prefix": true,
+    "function-url-quotes": "always",
+    "font-weight-notation": "numeric",
+    "font-family-name-quotes": "always-where-required",
+    "comment-whitespace-inside": "always",
+    "comment-empty-line-before": "always",
+    "at-rule-no-vendor-prefix": true,
+    "rule-empty-line-before": "always",
+    "selector-pseudo-element-colon-notation": "single",
+    "selector-no-vendor-prefix": true,
+    "media-feature-name-no-vendor-prefix": true,
+    "liberty/use-logical-spec": "always",
+    "color-no-hex": true,
+    "color-format/format": {
+      "format": "hsla"
+    }
+  }
+}

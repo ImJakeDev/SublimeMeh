@@ -9,6 +9,8 @@
     "lint": "next lint",
     "format": "prettier --check '**/*.{js,jsx,ts,tsx,json}'",
     "format:fix": "prettier --write '**/*.{js,jsx,ts,tsx,json}'",
+    "stylelint": "stylelint '**/*.css'",
+    "stylelint:fix": "stylelint --fix '**/*.css'",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -25,6 +27,12 @@
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "prettier": "3.0.3",
+    "stylelint": "^15.10.3",
+    "stylelint-color-format": "^1.1.0",
+    "stylelint-config-idiomatic-order": "^9.0.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-order": "^6.0.3",
+    "stylelint-use-logical-spec": "^5.0.0",
     "typescript": "latest"
   },
   "lint-staged": {
