@@ -1,6 +1,11 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-idiomatic-order"],
-  "plugins": ["stylelint-order", "stylelint-color-format", "stylelint-use-logical-spec"],
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-idiomatic-order"],
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-order",
+    "stylelint-color-format",
+    "stylelint-use-logical-spec"
+  ],
   "rules": {
     "no-duplicate-selectors": true,
     "selector-attribute-quotes": "always",
@@ -13,7 +18,6 @@
     "comment-whitespace-inside": "always",
     "comment-empty-line-before": "always",
     "at-rule-no-vendor-prefix": true,
-    "rule-empty-line-before": "always",
     "selector-pseudo-element-colon-notation": "single",
     "selector-no-vendor-prefix": true,
     "media-feature-name-no-vendor-prefix": true,
@@ -21,6 +25,15 @@
     "color-no-hex": true,
     "color-format/format": {
       "format": "hsla"
-    }
+    },
+    "at-rule-empty-line-before": null,
+    "block-no-empty": null,
+    "declaration-property-value-no-unknown": true,
+    "scss/at-import-no-partial-leading-underscore": null,
+    "scss/at-mixin-pattern": null,
+    "scss/at-rule-no-unknown": true,
+    "scss/dollar-variable-empty-line-before": null,
+    "scss/dollar-variable-pattern": null,
+    "selector-class-pattern": null
   }
 }
