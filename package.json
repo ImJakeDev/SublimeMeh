@@ -10,13 +10,14 @@
     "format": "prettier --check '**/*.{js,jsx,ts,tsx,json}'",
     "format:fix": "prettier --write '**/*.{js,jsx,ts,tsx,json}'",
     "stylelint": "stylelint '**/*.css'",
-    "stylelint:fix": "stylelint --fix '**/*.css'",
+    "stylelint:fix": "stylelint --fix '**/*.{css,scss}'",
     "prepare": "husky install"
   },
   "dependencies": {
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "sass": "^1.69.0"
   },
   "devDependencies": {
     "@types/node": "latest",

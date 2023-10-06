@@ -16,30 +16,6 @@
   padding-inline: 0;
 }
 
-.center:before {
-  border-radius: 50%;
-  background: var(--secondary-glow);
-  block-size: 360px;
-  inline-size: 480px;
-  margin-inline-start: -400px;
-}
-
-.center:after {
-  z-index: -1;
-  background: var(--primary-glow);
-  block-size: 180px;
-  inline-size: 240px;
-}
-
-.center:before,
-.center:after {
-  position: absolute;
-  content: '';
-  filter: blur(45px);
-  inset-inline-start: 50%;
-  transform: translateZ(0);
-}
-
 .logo {
   position: relative;
 }
